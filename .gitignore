@@ -1,0 +1,22 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Bản chạy nhanh (DML_FAST=1) chỉ để kiểm tra pipeline
+outputs_fast/
+
+# Model pickle: sinh lại được bằng ./run_all.sh
+*.pkl
+
+# Log ở thư mục gốc (log từng bước nằm trong outputs/logs/)
+/*.log
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,0 +1,19 @@
+[00:16:29] E2 cross-fitting by hand ...
+[00:17:09] E2 cross-fitting by hand done in 39.8s
+[00:17:09] E2 in-sample nuisances ...
+[00:17:13] E2 in-sample nuisances done in 4.2s
+[00:17:13] E2 DoubleMLPLR same folds ...
+[00:17:52] E2 DoubleMLPLR same folds done in 39.2s
+  saved outputs\tables\e2_dml_by_hand.csv
+                                  model        coef         se
+DML thủ công: cross-fitting + trực giao 6849.765644 866.740030
+               DoubleMLPLR (cùng folds) 6849.765644 866.740030
+    Bỏ cross-fitting (dự báo in-sample) 6401.860460 533.881868
+        Bỏ trực giao (chỉ khử X khỏi Y) 6000.089499 749.250356
+  |manual - library| = 0.000000
+  saved outputs\tables\e2_overfit_check.csv
+   nuisance  r2_out_of_fold  r2_in_sample
+l(X)=E[Y|X]        0.691066      0.884263
+m(X)=E[D|X]        0.159433      0.171745
+  saved outputs\figs\e2_residual_on_residual.png
+  saved outputs\figs\e2_variants.png

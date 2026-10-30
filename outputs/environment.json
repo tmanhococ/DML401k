@@ -1,0 +1,14 @@
+{
+  "python": "3.12.10",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "doubleml": "0.11.4",
+  "scikit-learn": "1.9.1",
+  "numpy": "2.5.4",
+  "pandas": "3.1.0",
+  "scipy": "1.18.1",
+  "n_trees": 1000,
+  "n_folds": 10,
+  "seed": 20241111,
+  "fast_mode": false,
+  "cpu_count": 16
+}

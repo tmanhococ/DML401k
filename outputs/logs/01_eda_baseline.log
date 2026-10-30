@@ -1,0 +1,13 @@
+  saved outputs\tables\e0_descriptives.csv
+  saved outputs\tables\e0_balance_table.csv
+  saved outputs\tables\e0_group_sizes.csv
+  saved outputs\figs\e0_love_plot.png
+  saved outputs\figs\e0_outcome_dist.png
+  saved outputs\tables\e1_baselines.csv
+                              model estimand         coef          se
+          Chênh lệch trung bình thô     e401 19559.344750 1412.920822
+OLS + 9 biến kiểm soát (tuyến tính)     e401  5057.980278 1098.528360
+            OLS + bậc 2 & tương tác     e401  7082.372081  834.461549
+              Chênh lệch thô (p401)     p401 27371.583404 1681.641535
+                OLS + 9 biến (p401)     p401  8667.532963 1349.731253
+      2SLS tuyến tính (p401 ~ e401)     p401  7299.324196 1583.552897

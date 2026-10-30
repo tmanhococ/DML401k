@@ -1,0 +1,90 @@
+[00:17:57] E3/E6 PLR ...
+[00:18:36] E3/E6 PLR done in 39.0s
+         coef  std err    t  P>|t|    2.5 %   97.5 %
+e401  6849.77   866.74  7.9    0.0  5150.99  8548.54
+[00:18:36] E3/E6 IRM (ATE) ...
+[00:19:29] E3/E6 IRM (ATE) done in 53.5s
+         coef  std err     t  P>|t|    2.5 %   97.5 %
+e401  6394.01   713.06  8.97    0.0  4996.45  7791.57
+[00:19:29] E3/E6 IRM (ATTE) ...
+[00:20:22] E3/E6 IRM (ATTE) done in 52.9s
+        coef  std err     t  P>|t|    2.5 %    97.5 %
+e401  9031.2  1013.76  8.91    0.0  7044.27  11018.13
+[00:20:22] E3/E6 PLIV ...
+[00:21:15] E3/E6 PLIV done in 53.3s
+         coef  std err     t  P>|t|    2.5 %    97.5 %
+p401  9767.55  1314.49  7.43    0.0  7191.19  12343.91
+[00:21:15] E3/E6 IIVM (LATE) ...
+[00:22:23] E3/E6 IIVM (LATE) done in 67.8s
+         coef  std err     t  P>|t|    2.5 %   97.5 %
+p401  9377.87  1018.35  9.21    0.0  7381.94  11373.8
+  saved outputs\tables\e3_dml_main.csv
+  saved outputs\tables\e3_vs_guide.csv
+          model    coef      se  guide_python_coef  guide_python_se  guide_stata_coef  guide_stata_se  guide_r_coef  guide_r_se  diff_vs_guide_python  diff_in_se_units
+        DML-PLR 6849.77  866.74            6737.64           909.32           7061.52          857.95          7826         907                112.13              0.12
+  DML-IRM (ATE) 6394.01  713.06            6344.02           719.96           6099.18          780.94          6901         771                 49.99              0.07
+       DML-PLIV 9767.55 1314.49           10375.66          1290.76           9896.56         1250.05         10746        1323               -608.11             -0.47
+DML-IIVM (LATE) 9377.87 1018.35            9343.24          1045.90           9313.53         1148.57          9611        1205                 34.63              0.03
+  saved outputs\tables\e4_nuisance_metrics.csv
+model            nuisance      rmse  r2_out_of_fold  log_loss  log_loss_constant   auc
+  PLR       l(X) = E[Y|X] 35305.164           0.691       NaN                NaN   NaN
+  PLR       m(X) = E[D|X]     0.443             NaN     0.574              0.660 0.741
+  IRM g(0,X) = E[Y|D=0,X] 32837.247           0.637       NaN                NaN   NaN
+  IRM g(1,X) = E[Y|D=1,X] 39992.669           0.714       NaN                NaN   NaN
+  IRM     m(X) = P(D=1|X)     0.443             NaN     0.574              0.660 0.741
+ PLIV    r(X) = E[p401|X]     0.411             NaN     0.509              0.575 0.729
+  saved outputs\tables\e4_overlap_summary.csv
+  saved outputs\figs\e4_overlap.png
+================== Sensitivity Analysis ==================
+
+------------------ Scenario          ------------------
+Significance Level: level=0.95
+Sensitivity parameters: cf_y=0.03; cf_d=0.03, rho=1.0
+
+------------------ Bounds with CI    ------------------
+         CI lower  theta lower        theta  theta upper      CI upper
+e401  2822.753092  4431.078355  6849.765644  9268.452932  10626.525314
+
+------------------ Robustness Values ------------------
+      H_0    RV (%)  RVa (%)
+e401  0.0  8.262384  6.05673
+[00:22:23] E7 benchmark PLR without ['inc'] ...
+[00:22:59] E7 benchmark PLR without ['inc'] done in 35.6s
+[00:22:59] E7 benchmark PLR without ['pira'] ...
+[00:23:37] E7 benchmark PLR without ['pira'] done in 38.2s
+[00:23:37] E7 benchmark PLR without ['twoearn'] ...
+[00:24:14] E7 benchmark PLR without ['twoearn'] done in 37.1s
+[00:24:14] E7 benchmark PLR without ['tw'] ...
+[00:24:52] E7 benchmark PLR without ['tw'] done in 37.8s
+================== Sensitivity Analysis ==================
+
+------------------ Scenario          ------------------
+Significance Level: level=0.95
+Sensitivity parameters: cf_y=0.03; cf_d=0.03, rho=1.0
+
+------------------ Bounds with CI    ------------------
+        CI lower  theta lower        theta  theta upper      CI upper
+e401  2408.04373  3746.686076  6394.008242  9041.330408  10172.601274
+
+------------------ Robustness Values ------------------
+      H_0    RV (%)   RVa (%)
+e401  0.0  7.091375  5.427459
+[00:24:52] E7 benchmark IRM (ATE) without ['inc'] ...
+[00:25:43] E7 benchmark IRM (ATE) without ['inc'] done in 50.9s
+[00:25:43] E7 benchmark IRM (ATE) without ['pira'] ...
+[00:26:34] E7 benchmark IRM (ATE) without ['pira'] done in 51.2s
+[00:26:34] E7 benchmark IRM (ATE) without ['twoearn'] ...
+[00:27:27] E7 benchmark IRM (ATE) without ['twoearn'] done in 52.4s
+[00:27:27] E7 benchmark IRM (ATE) without ['tw'] ...
+[00:28:18] E7 benchmark IRM (ATE) without ['tw'] done in 51.5s
+  saved outputs\tables\e7_sensitivity_summary.csv
+  saved outputs\tables\e7_sensitivity_benchmarks.csv
+  saved outputs\figs\e7_sensitivity_contour.png
+  saved outputs\tables\e8_gate_income.csv
+   group  2.5 %  effect  97.5 %     min      max  count
+Group_Q1 1350.4  2336.2  3321.9 -2652.0  17196.0   1983
+Group_Q2 -529.5  1843.8  4217.1 17214.0  26520.0   1983
+Group_Q3 3992.1  5663.7  7335.3 26523.0  37275.0   1983
+Group_Q4 4323.2  6576.5  8829.8 37296.0  53841.0   1983
+Group_Q5 9708.7 15549.8 21390.9 53844.0 242124.0   1983
+  saved outputs\figs\e8_gate_income.png
